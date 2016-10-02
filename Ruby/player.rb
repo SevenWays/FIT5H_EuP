@@ -20,16 +20,39 @@ class Player
 	end
 
 	def to_s
-		return 12121.to_s
+		say_hallo
 	end
+
+	def health
+		@health
+	end
+
+	def name
+		@name
+	end
+
+	def name=(name)
+		@name = name
+	end
+
+	def score
+		@health *= 100
+	end
+
 end
 
 mueller = Player.new('Müller')
 puts mueller
-	#puts mueller.say_hallo
-	#puts mueller.blam
+puts mueller.health
+
+mueller.name = "Manuell Neue"
+
+puts mueller.name
+
+puts mueller.say_hallo
 
 player2 = Player.new('Superman',333)
 
 	puts player2.say_hallo
 	puts player2.w00t
+	puts player2.score
