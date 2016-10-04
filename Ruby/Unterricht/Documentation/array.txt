@@ -22,3 +22,7 @@ Methoden von Array
 		seats.empty
 	Im Array Bestimmte Element löschen
 		seats.delete_at(3)
+	Elementen eines Array verbinden mit bestimmten delimiter und gibt als String zurück
+		seats.join("delimiter")
+	Elementen im Array zufällig sortieren
+		seats.shuffle

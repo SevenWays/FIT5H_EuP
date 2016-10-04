@@ -42,17 +42,20 @@ class Player
 end
 
 mueller = Player.new('Müller')
-puts mueller
-puts mueller.health
 
 mueller.name = "Manuell Neue"
 
-puts mueller.name
-
-puts mueller.say_hallo
 
 player2 = Player.new('Superman',333)
 
-	puts player2.say_hallo
+
 	puts player2.w00t
-	puts player2.score
+
+
+player3 = Player.new("Batman",99)
+
+players = [mueller, player2, player3]
+
+players.each do |e|
+puts e
+end
