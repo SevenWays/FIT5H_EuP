@@ -9,18 +9,18 @@ class Customer
 	end
 	
 	def print_address
-		puts ""
-		puts "//////////////////////////////////////////////////////"
-		puts "Konto:".ljust(30,".") + "#{@bank_account}"
-		puts "Name:".ljust(30,".") + fullname
-		puts "Street:".ljust(30,".") + "#{@street}"
-		puts "City:".ljust(30,".") + "#{@city}"
-		puts "//////////////////////////////////////////////////////"
+		"\n" +
+		"//////////////////////////////////////////////////////\n" +
+		"Konto:".ljust(30,".") + "#{@bank_account}\n" +
+		"Name:".ljust(30,".") + fullname +
+		"Street:".ljust(30,".") + "#{@street}\n" +
+		"City:".ljust(30,".") + "#{@city}\n" +
+		"//////////////////////////////////////////////////////\n"
 
 	end
 
 	def fullname
-		"#{@firstname} #{@lastname}"
+		"#{@firstname} #{@lastname}\n"
 	end
 	
 end
@@ -29,11 +29,11 @@ c1 = Customer.new(9999, "Hoffmann")
 c1.firstname = "Sergej"
 c1.street = "Frederic-Chopin-weg 10"
 c1.city = "Winsen"
-c1.print_address
+puts c1.print_address
 
 c2 = Customer.new(8888)
 c2.lastname = "Lodgz"
 c2.firstname = "Theo"
 c2.street = "Hermelinweg 7"
 c2.city = "Hamburg"
-c2.print_address
+puts c2.print_address
