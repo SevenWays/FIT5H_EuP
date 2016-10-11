@@ -40,22 +40,3 @@ class Player
 	end
 
 end
-
-mueller = Player.new('Müller')
-
-mueller.name = "Manuell Neue"
-
-
-player2 = Player.new('Superman',333)
-
-
-	puts player2.w00t
-
-
-player3 = Player.new("Batman",99)
-
-players = [mueller, player2, player3]
-
-players.each do |e|
-puts e
-end
