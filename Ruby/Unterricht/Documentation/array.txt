@@ -16,13 +16,34 @@ Werte hinzufügen
 Methoden von Array
 	Array Grösse:
 		seats.size
+
 	Letztes Element entfernen
 		seats.pop
+
 	Array ist leer
-		seats.empty
+		seats.empty?
+
 	Im Array Bestimmte Element löschen
 		seats.delete_at(3)
+
 	Elementen eines Array verbinden mit bestimmten delimiter und gibt als String zurück
 		seats.join("delimiter")
+
 	Elementen im Array zufällig sortieren
 		seats.shuffle
+
+Iterations-Methoden:
+	var = %w(ich u du)
+
+	Methode zum durchlaufen der einzelnen Elementen
+		var.each
+
+	Methode, die im Block einen boolschen Wert erwartet und die true den Inhalt zurückgibt
+		ret = var.select{|v| v.size > 1}
+		ret enthält ['ich', 'du']
+
+	Gegenteil von select ist
+		ret = var.reject {|v| v.size > 1}
+		ret enthält ['u']
+
+	Sortiert das Array 

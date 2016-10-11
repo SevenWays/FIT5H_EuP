@@ -10,17 +10,17 @@ class Game
 	end
 
 	def play
-		puts "dddd"
+		puts "There are #{@players.size} players in Knuckleheads: "
 			@players.each do |player|
 				puts player
 			end
 
-	@players.each do |player|
-		puts	player.blame
-		puts	player.w00t
-		puts	player.w00t
-		puts 	player.say_hallo
-	end
+			@players.each do |player|
+				puts	player.blame
+				puts	player.w00t
+				puts	player.w00t
+				puts 	player.say_hallo
+			end
 
 
 	end
