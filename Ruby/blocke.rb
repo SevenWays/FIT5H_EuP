@@ -42,7 +42,19 @@ puts str
 
  # Aufgabe 1f
 puts "////////////////// Aufgabe 1f //////////////////////"
-
+squart = []
  numbers.each { |number|
-
+squart << Math::sqrt(number)
 }
+
+puts squart
+
+ # Aufgabe 1f
+puts "////////////////// Aufgabe 1g //////////////////////"
+squartHash = {}
+
+numbers.each { |number|
+squartHash[number] = Math::sqrt(number)
+}
+
+puts squartHash
