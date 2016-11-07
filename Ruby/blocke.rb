@@ -22,6 +22,11 @@ numbers.each { |number|
 hash1[number] = rand(100..200)
  }
 
+ ash1 = Hash.new
+numbers.each { |number|
+puts hash1[number] 
+ }
+
 # Aufgabe 1d
 puts "////////////////// Aufgabe 1d //////////////////////"
 
@@ -33,7 +38,8 @@ puts "Index: " + key.to_s + " - Wert: " + value.to_s
 puts "////////////////// Aufgabe 1e //////////////////////"
 
 hash1.each { |key, value|
-str = "Index: " + key.to_s + " - Wert: " + value.to_s
+#str = "Index: " + key.to_s + " - Wert: " + value.to_s
+str = "Index: #{key} - Wert: #{value}"
 if value > 150
   str = str + " WOW!!!"
 end
@@ -42,12 +48,12 @@ puts str
 
  # Aufgabe 1f
 puts "////////////////// Aufgabe 1f //////////////////////"
-squart = []
+squartArray = []
  numbers.each { |number|
-squart << Math::sqrt(number)
+squartArray << Math::sqrt(number)
 }
 
-puts squart
+puts squartArray
 
  # Aufgabe 1f
 puts "////////////////// Aufgabe 1g //////////////////////"

@@ -16,7 +16,13 @@ class Kunde
 
     "#{names[0].capitalize} #{names[1].capitalize}, #{adresse}"
   end
+
+def name=(name)
+  names =  name.split(' ')
+  @name = "#{names[0].capitalize} #{names[1].capitalize}"
 end
+end
+
 
 class Kredit
   attr_accessor :kredit

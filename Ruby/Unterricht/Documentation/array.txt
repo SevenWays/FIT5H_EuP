@@ -33,17 +33,20 @@ Methoden von Array
 		seats.shuffle
 
 Iterations-Methoden:
-	var = %w(ich u du)
+var = %w(ich u du)
 
-	Methode zum durchlaufen der einzelnen Elementen
-		var.each
+var.each
+	Methode zum durchlaufen der einzelnen Elemente
 
-	Methode, die im Block einen boolschen Wert erwartet und die true den Inhalt zurückgibt
-		ret = var.select{|v| v.size > 1}
-		ret enthält ['ich', 'du']
+var.select
+	Methode, die im Block einen boolschen Wert erwartet und bei true den Inhalt zurückgibt
+	ret = var.select {|v| v.size > 1 } 
+	ret enthält ['ich', 'du']
 
-	Gegenteil von select ist
-		ret = var.reject {|v| v.size > 1}
-		ret enthält ['u']
+var.reject
+	Gegenteil von select: die zurückgewiesenen Werte werden gespeichert
+	ret = var.reject {|v| v.size > 1 }
+	ret enthält ['u']
 
-	Sortiert das Array 
+var.sort
+	gibt ein sortiertes Array zurück

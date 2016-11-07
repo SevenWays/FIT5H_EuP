@@ -1,12 +1,18 @@
 class Player
 
+	attr_reader :name
+
 	def initialize(pname, phealth=100)
-		@name = pname
+		self.name = (pname)
 		@health = phealth
 	end
 
+	def name=(name)
+		@name = name.capitalize
+	end
+
 	def say_hallo()
-		"Hallo, ich bin #{@name} mit einem Wert von #{@health}"
+		"Hallo, ich bin #{@name} mit einem Wert von #{@health} " + score.to_s
 	end
 
 	def blame
@@ -40,3 +46,5 @@ class Player
 	end
 
 end
+p = Player.new("sergej")
+puts p.say_hallo
