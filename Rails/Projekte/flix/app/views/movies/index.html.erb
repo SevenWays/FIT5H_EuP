@@ -1,0 +1,21 @@
+<h1><%= pluralize(@movies.count, 'Movie') %></h1>
+
+<table>
+<% @movies.each do |movie| %>
+
+	<tr>
+		<td><%= movie.title %></td>
+		<td><%= movie.raiting %></td>
+		<td><%= format_price(movie.total_gross) %></td> 
+		<td><%= truncate(movie.description, length: 17) %></td>
+		<td><%= movie.released_on %></td>
+		<td><%= movie.released_on %></td>
+		<td><%= link_to "Show", movie_path(movie.id) %></td>
+		<td><%= link_to 'Edit', edit_movie_path(movie.id) %></td>
+		<td><%= link_to 'Delete', movie_path(movie.id), method: :delite, data: {confirm: "Sicher löschen?"} %></td>
+	</tr>
+
+	<% end %>
+</table>
+<p><%= link_to "Neuen Movie", new_movie_path %></p>
+	
