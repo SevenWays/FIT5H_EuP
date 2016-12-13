@@ -1,0 +1,22 @@
+Assets
+	Im Ordner app/assets werden alle Sylesheets, Javascripts und Bilder abgelegt.
+
+	Javascripts
+		/app/javascripts/application.js
+			Hier werden alle Datein, die geladen werden sollen notiert
+
+	Stylesheets
+		/app/stylesheets/application.css
+			Alle heir notierten Anweisungen werden ausgeführt
+			z.B.:  bindet die datein styles.css ein
+
+	Images
+		Rails sucht atandartmäßig alle Bilder die mit dem Helper image_tag eingebunden werden im Ordner:
+		/app/assets/images
+			z.B.: <%= image_tag 'logo.jpg' %>
+
+Layout in Rails
+	Standardmäßig gibt es in app/views einen layouts - Ordner. Dort sind alle Dateien, die dem Corporate Design der App zugeordnet sind, wie etwa Header, Footer, Navigation.
+	Wenn der Dispatcher die Anweisungen im Controller abgearbeitet hat und die Seiten zum Browser schicken will, dann sucht er Standardmäßig die datei: app/views/layouts/application.html.erb
+		In dieser Seite gibt es den Aufruf <%= yield %> in dem der jeweils spezielle Seiteninhalt eingefügt wird unter: http://foundation.zurb.com/sites/docs/v/5.5.3/applications.html beschrieben.
+		Siehe ausführliche Dokumentation.

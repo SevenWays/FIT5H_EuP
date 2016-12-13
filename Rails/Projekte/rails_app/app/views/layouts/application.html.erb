@@ -13,11 +13,24 @@
   </head>
 
   <body>
-  <div class="row">
-  <%= image_tag 'logo.jpg' %>
-  <%= render 'layouts/top_bar' %>
+    <div class="row">
+    
+      <div class="row float-right">
+        <%= image_tag 'logo.png' %>  
+      </div>
+      <div class="clearfix"></div>
+      
+      <%= render 'layouts/top_bar' %>
 
-    <%= yield %>
-</div>
+      <div class="row">
+        <div class="medium-3 columns">
+          <%= render 'layouts/side_bar' %>
+        </div>
+        <div class="medium-9 columns" >
+          <%= yield %>
+        </div>
+      </div>
+
+    </div>
   </body>
 </html>

@@ -1,0 +1,11 @@
+Alle Befehle mit der Model-Klasse Event
+	Anlegen eines neuen Events:
+		e = Event.new
+		e.name = "Eventname"
+		..
+		e.save
+
+Anzeigen aller Events:
+	Event.all
+
+Suche eines specielles
