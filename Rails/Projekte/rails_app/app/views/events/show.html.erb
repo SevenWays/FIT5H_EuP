@@ -11,4 +11,24 @@
 <h3>Price</h3>
 <p><%= format_price @event %></p>
 
+<% unless like = @event.likes.where(user_id: current_user.id, event_id: @event.id).first %>
+<p><%= button_to 'LIKE', event_likes_path(@event), class: 'button primary fi_star' 	%></p>
+<% else %>
+<p><%= link_to 'DISLIKE', event_like_path(@event, like.id), method: :delete, class: 'button alert' 	%></p>
+<% end %>
+
+
+
+<% if @liker.any? %>
+	<h3>Likers</h3>
+	<p>
+		<ul>
+			<% @liker.each do |user| %>
+				<li><%= user.name %></li>
+			<% end %>
+		</ul>
+	</p>
+<% end %>
+
+
 <p><%= link_to "Alle Events anzeigen", events_path %></p>

@@ -4,8 +4,7 @@
 	  end
 	Die Registrations-Resource ist der Event-Resource untergeordnet
 
-2. Falls die Resource registrations mit einem Scaffold angelegt wurde, müssen alle Links in der Verschachtelten Resource geändert werden.
-
+2. Falls die Resource registrations mit einem Scaffold angelegt wurde, müssen alle Links geändert werden.
 
 3. Im Registrations-Controller sollte eine Before-Methode definiert sein, die bei jeder Action des Controllers eine Instanzvariable @event erzeugt.
 	before_action :set_event
